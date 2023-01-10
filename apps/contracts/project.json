@@ -18,7 +18,10 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/contracts/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/contracts/src/favicon.ico", "apps/contracts/src/assets"],
+        "assets": [
+          "apps/contracts/src/favicon.ico",
+          "apps/contracts/src/assets"
+        ],
         "styles": ["apps/contracts/src/styles.scss"],
         "scripts": []
       },
@@ -73,7 +76,10 @@
         "polyfills": ["zone.js", "zone.js/testing"],
         "tsConfig": "apps/contracts/tsconfig.spec.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/contracts/src/favicon.ico", "apps/contracts/src/assets"],
+        "assets": [
+          "apps/contracts/src/favicon.ico",
+          "apps/contracts/src/assets"
+        ],
         "styles": ["apps/contracts/src/styles.scss"],
         "scripts": []
       }
