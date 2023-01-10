@@ -1,0 +1,82 @@
+{
+  "name": "contract",
+  "projectType": "application",
+  "generators": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  },
+  "sourceRoot": "apps/contract/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/contract",
+        "index": "apps/contract/src/index.html",
+        "main": "apps/contract/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/contract/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/contract/src/favicon.ico", "apps/contract/src/assets"],
+        "styles": ["apps/contract/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "contract:build:production"
+        },
+        "development": {
+          "browserTarget": "contract:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "contract:build"
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "polyfills": ["zone.js", "zone.js/testing"],
+        "tsConfig": "apps/contract/tsconfig.spec.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/contract/src/favicon.ico", "apps/contract/src/assets"],
+        "styles": ["apps/contract/src/styles.scss"],
+        "scripts": []
+      }
+    }
+  }
+}
