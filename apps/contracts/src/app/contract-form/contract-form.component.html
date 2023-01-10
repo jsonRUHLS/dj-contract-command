@@ -1,1 +1,60 @@
-<p>contract-form works!</p>
+<form>
+    <h3>DJ Contact Information</h3>
+    <div>
+      <label>Name:</label>
+      <input type="text" name="djName" [(ngModel)]="djName" />
+    </div>
+    <div>
+      <label>Email:</label>
+      <input type="email" name="djEmail" [(ngModel)]="djEmail" />
+    </div>
+    <div>
+      <label>Phone:</label>
+      <input type="tel" name="djPhone" [(ngModel)]="djPhone" />
+    </div>
+    <h3>Client Contact Information</h3>
+    <div>
+      <label>Name:</label>
+      <input type="text" name="clientName" [(ngModel)]="clientName" />
+    </div>
+    <div>
+      <label>Email:</label>
+      <input type="email" name="clientEmail" [(ngModel)]="clientEmail" />
+    </div>
+    <div>
+      <label>Phone:</label>
+      <input type="tel" name="clientPhone" [(ngModel)]="clientPhone" />
+    </div>
+    <h3>Event Information</h3>
+    <div>
+      <label>Date:</label>
+      <input type="date" name="eventDate" [(ngModel)]="eventDate" />
+    </div>
+    <div>
+      <label>Location:</label>
+      <input type="text" name="eventLocation" [(ngModel)]="eventLocation" />
+    </div>
+    <h3>Services</h3>
+    <div>
+      <label>Music:</label>
+      <input type="checkbox" name="music" [(ngModel)]="music" />
+    </div>
+    <div>
+      <label>Lighting:</label>
+      <input type="checkbox" name="lighting" [(ngModel)]="lighting" />
+    </div>
+    <div>
+      <label>Sound Equipment:</label>
+      <input type="checkbox" name="soundEquipment" [(ngModel)]="soundEquipment" />
+    </div>
+    <h3>Fees and Payment</h3>
+    <div>
+      <label>Fee:</label>
+      <input type="number" name="fee" [(ngModel)]="fee" />
+    </div>
+    <div>
+      <label>Payment Terms:</label>
+      <textarea name="paymentTerms" [(ngModel)]="paymentTerms"></textarea>
+    </div>
+    <button type="submit">Generate Contract</button>
+  </form>
