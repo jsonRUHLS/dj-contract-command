@@ -1,25 +1,25 @@
 {
-  "name": "contract",
+  "name": "contracts",
   "projectType": "application",
   "generators": {
     "@schematics/angular:component": {
       "style": "scss"
     }
   },
-  "sourceRoot": "apps/contract/src",
+  "sourceRoot": "apps/contracts/src",
   "prefix": "app",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "options": {
-        "outputPath": "dist/apps/contract",
-        "index": "apps/contract/src/index.html",
-        "main": "apps/contract/src/main.ts",
+        "outputPath": "dist/apps/contracts",
+        "index": "apps/contracts/src/index.html",
+        "main": "apps/contracts/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/contract/tsconfig.app.json",
+        "tsConfig": "apps/contracts/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/contract/src/favicon.ico", "apps/contract/src/assets"],
-        "styles": ["apps/contract/src/styles.scss"],
+        "assets": ["apps/contracts/src/favicon.ico", "apps/contracts/src/assets"],
+        "styles": ["apps/contracts/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -53,10 +53,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "contract:build:production"
+          "browserTarget": "contracts:build:production"
         },
         "development": {
-          "browserTarget": "contract:build:development"
+          "browserTarget": "contracts:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,17 +64,17 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "contract:build"
+        "browserTarget": "contracts:build"
       }
     },
     "test": {
       "executor": "@angular-devkit/build-angular:karma",
       "options": {
         "polyfills": ["zone.js", "zone.js/testing"],
-        "tsConfig": "apps/contract/tsconfig.spec.json",
+        "tsConfig": "apps/contracts/tsconfig.spec.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/contract/src/favicon.ico", "apps/contract/src/assets"],
-        "styles": ["apps/contract/src/styles.scss"],
+        "assets": ["apps/contracts/src/favicon.ico", "apps/contracts/src/assets"],
+        "styles": ["apps/contracts/src/styles.scss"],
         "scripts": []
       }
     }
