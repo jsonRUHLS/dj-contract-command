@@ -20,8 +20,8 @@
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
     "paths": {
-      "core": ["libs/core/src/index.ts"],
-      "shared": ["libs/shared/src/index.ts"]
+      "@core": ["libs/core/src/index.ts"],
+      "@shared": ["libs/shared/src/index.ts"]
     },
     "rootDir": "."
   },
